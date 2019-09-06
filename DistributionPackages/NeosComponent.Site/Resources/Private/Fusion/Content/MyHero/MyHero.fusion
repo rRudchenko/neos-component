@@ -1,0 +1,38 @@
+prototype(NeosComponent.Site:Content.MyHero) < prototype(Neos.Neos:ContentComponent) {
+
+src = Neos.Neos:ImageUri {
+	asset = ${q(node).property('image')}
+}
+alternativeText = ${q(node).property('alternativeText')}
+
+heroTitle = Neos.Neos:Editable {
+  property = 'heroTitle'
+}
+heroText = Neos.Neos:Editable {
+  property = 'heroText'
+}
+
+buttonLink = ${q(node).property('buttonLink')}
+
+buttonLabel = Neos.Neos:Editable {
+  property = 'buttonLabel'
+}
+
+renderAsLink = ${site.context.inBackend ? false : true}
+
+    renderer = afx`
+			<section class="myhero-container">
+				<div class="myhero-img">
+					<img src={props.src} alt={props.alternativeText} />
+				</div>
+				<div class="myhero-content">
+					<div class="content-title">{props.heroTitle}</div>
+					<p class="content-text">{props.heroText}</p>
+				</div>
+				<div class="myhero-button">
+				<a @if.render={props.renderAsLink} href={props.buttonLink} target="_blank" class="button-text">{props.buttonLabel}</a>
+				<div @if.render={!props.renderAsLink} class="button-text">{props.buttonLabel}</div>
+				</div>
+			</section>
+    `
+}

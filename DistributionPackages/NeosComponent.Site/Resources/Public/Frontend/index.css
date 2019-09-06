@@ -3,9 +3,10 @@
  * It's recommended to replace this with your own frontend tooling.
  */
 
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /**
@@ -58,13 +59,18 @@ body {
     background: #00ADEE;
 }
 
+* {
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+}
+
 /*
  * Main Content Layout
  */
 .main {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0.5rem;
+    /* padding: 10px; */
 }
 
 .main img {
@@ -95,3 +101,159 @@ body {
     color: black;
     font-style: italic;
 }
+
+
+
+/*
+#######CUSTOM CSS#######
+*/
+
+.myhero-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto 26px;
+    padding: 0;
+    max-width: 1200px;
+    min-height: 446px;
+    box-shadow: 0 0 2px #999;
+    border-radius: 2px;
+    /* border: 1px solid red; */
+}
+
+
+.myhero-img {
+    max-width: 300px;
+    width: 30%;
+    height: 466px;
+    margin: 0;
+    padding: 0;
+}
+
+.myhero-img img {
+  border-radius: 0 120px 120px 0 / 0 450px 450px 0;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  background-position: top left;
+}
+
+.myhero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 56px 60px;
+  max-width: 620px;
+  width: 50%;
+  height: 446px;
+    /* min-height: 466px; */
+    /* border: 1px solid yellow; */
+}
+@media (max-width: 768px) {
+
+  .myhero-container {
+    max-width: 640px;
+  }
+
+  .myhero-img {
+    order: 1;
+    width: 50%;
+  }
+  .myhero-content {
+    /* -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3; */
+    order: 3;
+    width: 100%;
+    border-top: 1px solid #999;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .myhero-button {
+    order: 2;
+    min-width: 50%;
+    box-shadow: none !important;
+  }
+  .button-text {
+    font-weight: normal;
+  }
+}
+
+.content-title p {
+    font: 24px "Mukta", sans-serif;
+    font-weight: bold;
+    color: #004B89;
+    text-transform: uppercase;
+}
+
+.content-text {
+  max-width: 500px;
+  padding: 24px 0 0;
+  font: 16px "Mukta", sans-serif;
+  font-weight: 400;
+  color: #475055;
+  line-height: 25px;
+}
+
+
+
+
+.myhero-button {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  max-width: 175px;
+  height: 100%;
+  min-height: 466px;
+  /* padding: 18px; */
+  font: 18px "Mukta", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
+  background: #fff;
+  color: #004B89;
+  box-shadow: 0 2px 2px #999;
+  transition: all 0.3s ease-in-out;
+}
+.myhero-button:hover {
+
+    background: #004B89;
+    color: #ffffff;
+}
+
+.myhero-button:hover a {
+    /* background: #004B89; */
+    color: #ffffff;
+}
+
+.myhero-button a {
+  line-height: 40px;
+  color: #004B89;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* .icon-menr {
+  width: 30px;
+  height: 30px;
+  font-size: 23px;
+  line-height: 1;
+  font-family: 'FontAwesome' !important;
+} */
+.myhero-button img {
+  width: 30px;
+  height: 30px;
+}
+/* .myhero-button::before {
+    content: "";
+} */
+
+
+

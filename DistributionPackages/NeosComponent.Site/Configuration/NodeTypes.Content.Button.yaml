@@ -1,0 +1,27 @@
+'NeosComponent.Site:Content.Button':
+  superTypes:
+    'Neos.Neos:Content': true
+
+  ui:
+    label: Button
+    icon: icon-link
+    position: 400
+    inlineEditable: true
+    inspector:
+      groups:
+        buttonLink:
+          label: 'ButtonLink'
+          icon: icon-link
+  properties:
+    label:
+      ui:
+        aloha:
+          placeholder: 'enter label'
+      options:
+        silhouette: 'text.free'
+    buttonLink:
+      type: string
+      ui:
+        label: 'Link Target'
+        inspector:
+          group: buttonLink
