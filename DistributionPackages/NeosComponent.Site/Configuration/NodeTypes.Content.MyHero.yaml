@@ -5,27 +5,15 @@
     'NeosComponent.Site:Content.Text': true
   ui:
     label: MyHero
-    # group: 'myhero'
     icon: icon-sticker-mule
     position: 300
     inlineEditable: true
-    # ui:
     inspector:
       groups:
         myhero:
           label: 'My Hero Settings'
           icon: icon-sticker-mule
   properties:
-# LEFT IMAGE #######
-    # image:
-    #   ui:
-    #     label: 'my heroW image'
-    #     # icon: icon-sticker-mule
-    #     position: 350
-    #     inspector:
-    #       group: myhero
-
-      # properties:
     image:
       type: Neos\Media\Domain\Model\ImageInterface
       ui:
